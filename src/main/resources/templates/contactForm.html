@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Please fill up your contact details!</h1>
+    <form 
+        method="post"
+        th:action="@{/contact}"
+        th:object="${contact}">
+        <p1>Name:<input type="text" th:field="*{name}"/></p1>
+        <p1>Email:<input type="text" th:field="*{email}"/></p1>
+        <p1>Phone Number:<input type="text" th:field="*{phoneNumber}"/></p1>
+        <input type="Submit" value="Submit"/>
+    </form>
+</body>
+</html>
