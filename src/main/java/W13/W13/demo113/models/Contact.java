@@ -5,17 +5,17 @@ import java.util.Random;
 public class Contact {
     private String name;
     private String email;
-    private String phoneNumber;
+    private int phoneNumber;
     private String id;
 
-    public Contact(String name, String email, String phoneNo) {
+    public Contact(String name, String email, int phoneNo) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNo;
         this.id = generateId(8);
     }
 
-    public Contact(String id, String name, String email, String phoneNo) {
+    public Contact(String id, String name, String email, int phoneNo) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -51,11 +51,11 @@ public class Contact {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

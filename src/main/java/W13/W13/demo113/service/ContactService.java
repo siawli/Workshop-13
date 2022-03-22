@@ -69,7 +69,7 @@ public class ContactService {
             List<String> stringListVal = Files.readAllLines(filePath, Charset.forName("UTF-8"));
             ct.setName(stringListVal.get(0));
             ct.setEmail(stringListVal.get(1));
-            ct.setPhoneNumber(stringListVal.get(2));
+            ct.setPhoneNumber(Integer.parseInt(stringListVal.get(2)));
             ct.setId(Id);
             System.out.println(">>>>> name " + ct.getName());
             System.out.println(">>>>> name " + ct.getEmail());
